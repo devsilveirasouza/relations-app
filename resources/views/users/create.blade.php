@@ -41,6 +41,14 @@
                                 <input type="password" class="form-control" id="password" name="password" required>
                             </div>
 
+                            <div class="form-group">
+                                <label for="userType">Tipo de Usuário</label>
+                                <select name="role" required>
+                                    <option value="user" selected>Usuário</option>
+                                    <option value="admin" >Administrador</option>
+                                </select>
+                            </div>
+
                             <button type="submit" class="btn btn-primary mt-3">Criar</button>
                             <button type="reset" class="btn btn-secondary mt-3">Limpar</button>
                         </form>

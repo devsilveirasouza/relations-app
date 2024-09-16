@@ -11,13 +11,13 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="p-1">
             <div class="card">
-                <div class="card-header text-center bg-primary text-white">Gestão de Usuários</div>
+                <div class="card-header mt-4 text-center bg-dark text-white">Gestão de Usuários</div>
                 <div class="card-body">
                     <div class="container mt-5">
                         <h1 class="mb-4">Lista de Usuários
-                            <a href="{{ route('users.create') }}" class="btn btn-primary float-end">Criar</a>
+                            <a href="{{ route('users.create') }}" class="btn btn-primary float-end">Novo</a>
                         </h1>
 
                         @if(session('success'))
@@ -32,6 +32,7 @@
                                     <th>ID</th>
                                     <th>Name</th>
                                     <th>Email</th>
+                                    <th>Role</th>
                                     <th>Created At</th>
                                     <th>Updated At</th>
                                     <th>Actions</th>
@@ -43,6 +44,7 @@
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
+                                    <td>{{ $user->role }}</td>
                                     <td>{{ $user->created_at }}</td>
                                     <td>{{ $user->updated_at }}</td>
                                     <td>

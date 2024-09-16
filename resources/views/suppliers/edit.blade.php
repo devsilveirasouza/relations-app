@@ -5,13 +5,13 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="p-1">
             <div class="card">
-                <div class="card-header text-center bg-primary text-white">Gestão de Fornecedores</div>
+                <div class="card-header mt-4 text-center bg-dark text-white">Gestão de Fornecedores</div>
                 <div class="card-body">
                     <div class="container mt-5">
                         <h1 class="mb-4">Atualizar Fornecedor</h1>
-                        
+
                         @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -29,11 +29,11 @@
                             <div class="form-group">
                                 <label for="name">Name:</label>
                                 <input type="text" value="{{ $supplier->name }}" class="form-control" id="name" name="name" required>
-                            </div>          
+                            </div>
 
                             <div class="form-group">
                                 <label for="email">Email:</label>
-                                <input type="email" value="{{ $supplier->email }}" class="form-control" id="email" name="email" required>  
+                                <input type="email" value="{{ $supplier->email }}" class="form-control" id="email" name="email" required>
                             </div>
 
                             <button type="submit" class="btn btn-primary mt-3" onclick="return confirm('Você têm certeza que quer atualizar este fornecedor?')">Atualizar</button>

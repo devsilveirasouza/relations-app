@@ -5,13 +5,13 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="p-1">
             <div class="card">
-                <div class="card-header text-center bg-primary text-white">Gestão de Usuários</div>
+                <div class="card-header mt-4 text-center bg-dark text-white">Gestão de Usuários</div>
                 <div class="card-body">
                     <div class="container mt-5">
                         <h1 class="mb-4">Atualizar Usuário</h1>
-                        
+
                         @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -29,11 +29,19 @@
                             <div class="form-group">
                                 <label for="name">Name:</label>
                                 <input type="text" value="{{ $user->name }}" class="form-control" id="name" name="name" required>
-                            </div>          
+                            </div>
 
                             <div class="form-group">
                                 <label for="email">Email:</label>
-                                <input type="email" value="{{ $user->email }}" class="form-control" id="email" name="email" required>  
+                                <input type="email" value="{{ $user->email }}" class="form-control" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="userType">Tipo de Usuário</label>
+                                <select name="role" class="form-control" required>
+                                    <option value="user" {{ (isset($user->role) && $user->role == 'user') ? 'selected' : '' }}>Usuário</option>
+                                    <option value="admin" {{ (isset($user->role) && $user->role == 'admin') ? 'selected' : '' }}>Administrador</option>
+                                </select>
                             </div>
 
                             <button type="submit" class="btn btn-primary mt-3" onclick="return confirm('Você têm certeza que quer atualizar este usuário?')">Atualizar</button>

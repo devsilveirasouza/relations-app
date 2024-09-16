@@ -6,57 +6,52 @@
 
 <div class="container">
 
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header text-center bg-primary text-white">USERS</div>
-                <div class="card-body">
-                    <div class="container mt-5">
-                        <h2 class="mb-4">Gestão de Usuários</h2>
-                        <a href="{{ route('users.index') }}" class="btn btn-primary">Usuários</a>
-                    </div>
-                </div>
+    <div class="row justify-content-center mt-5 mb-5 text-center">
+        <div class="card bg-dark col-md-12">
+            <div class="card-header text-white">
+                <h3 class="card-title">SERVICE CAR SYSTEM</h3>
+            </div>
+
+            <div class="card-body">
+                <p class="card-text text-white">
+                    Acesse as seguintes páginas:
+                </p>
+                <a href="{{ route('users.index') }}" class="btn btn-primary btn-sm text-white">Usuários</a>
+                <a href="{{ route('suppliers.index') }}" class="btn btn-primary btn-sm text-white">Fornecedores</a>
+                <a href="{{ route('products.index') }}" class="btn btn-primary btn-sm text-white">Produtos</a>
+                <a href="{{ route('categories.index') }}" class="btn btn-primary btn-sm text-white">Categorias</a>
             </div>
         </div>
-    
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header text-center bg-primary text-white">CATEGORIAS</div>
+
+        <div class="card text-bg-dark">
+            <img src="{{ asset('img/bg-oficina.png') }}" class="card-img" alt="Oficina Mecânica">
+            <div class="card-img-overlay">
+
+                <h2 class="card-title">GESTÃO DE ORDENS DE SERVIÇOS</h2>
+
                 <div class="card-body">
-                    <div class="container mt-5">
-                        <h1 class="mb-4">Gestão de Categorias</h1>
-                        <a href="{{ route('categories.index') }}" class="btn btn-primary">Categorias</a>
+                    <div class="row">
+                        <div class="card text-bg-secondary col-md-4">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                        </div>
+                        <div class="card text-bg-secondary col-md-4">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                        </div>
+                        <div class="card text-bg-secondary col-md-4">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                        </div>
                     </div>
+
+
+
                 </div>
+
             </div>
+
         </div>
     </div>
 
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header text-center bg-primary text-white">FORNECEDORES</div>
-                <div class="card-body">
-                    <div class="container mt-5">
-                        <h1 class="mb-4">Gestão de Fornecedores</h1>
-                        <a href="{{ route('suppliers.index') }}" class="btn btn-primary">Fornecedores</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header text-center bg-primary text-white">PRODUTOS</div>
-                <div class="card-body">
-                    <div class="container mt-5">
-                    <h1 class="mb-4">Gestão de Produtos</h1>
-                    <a href="{{ route('home') }}" class="btn btn-primary">Produtos</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-@endsection
+    @endsection

@@ -11,9 +11,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12">
+    <div class="p-1">
             <div class="card">
-                <div class="card-header text-center bg-primary text-white">Gestão de Categorias</div>
+                <div class="card-header mt-4 text-center bg-dark text-white">Gestão de Categorias</div>
                 <div class="card-body">
                     <div class="container mt-5">
                         <h1 class="mb-4">Lista de Categorias
